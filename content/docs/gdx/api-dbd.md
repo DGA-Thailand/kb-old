@@ -232,12 +232,15 @@ BODY
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/shareholder/pdf?JuristicID=[JuristicID]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
  
+**Response**
 
-Response
-
+```
 BODY
 {
 "ID": "0000000000000",
@@ -247,35 +250,32 @@ BODY
 "Hashes": "147EDBE0517818E5C886CC2C4CA4A096",
 "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC9TaWcvVC..."
 }
-JSON
- 
+```
 
-คำอธิบายชุดข้อมูล
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-ID
-เลขทะเบียนนิติบุคคล
-FileName
-ชื่อไฟล์
-FileSize
-ขนาดไฟล์
-mimeType
-ประเภทไฟล์
-Hashes
-แฮชไฟล์สำหรับตรวจสอบ
-Result
-ไฟล์ในรูปแบบ Base64 
+| รายการข้อมูล | คำอธิบาย |
+| --- | --- |
+| ID | เลขทะเบียนนิติบุคคล |
+| FileName | ชื่อไฟล์ |
+| FileSize | ขนาดไฟล์ |
+| mimeType | ประเภทไฟล์ |
+| Hashes | แฮชไฟล์สำหรับตรวจสอบ |
+| Result | ไฟล์ในรูปแบบ Base64 |
 
 #### 5 [DBD-005-04] API บัญชีรายชื่อผู้ถือหุ้น (แบบรูปภาพในรูปแบบ pdf) (image-pdf)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/shareholder/image/pdf?JuristicID=[JuristicID]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
  
+**Response**
 
-Response
-
+```
 {
   "ID": "0000000000007",
   "FileName": "0000000000007-ข้อมูลผู้ถือหุ้น (V4) (รูปภาพ)-Certificate_20201028112450.pdf",
@@ -288,33 +288,34 @@ Response
   "Hashes": "D6ADCBFEEDF694781C21B89135442152",
   "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC9TaWcvVChTaWduYXR1cmUxKS9WIDEgMCBSL0YgMTMyL....."
 }
-JSON
- 
+```
 
-คำอธิบายชุดข้อมูล
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-ID	เลขนิติบุคคล
-FileName	ชื่อไฟล์
-FileSize	ขนาดไฟล์ (Byte)
-INFO	 
-Name	ชื่อเอกสาร
-NumberOfPage	จำนวนหน้าของเอกสาร
-mimeType	ประเภทไฟล์
-Hashes	แฮชไฟล์สำหรับตรวจสอบ
-Result	ไฟล์ในรูปแบบ Base64
-
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| ID | เลขนิติบุคคล |
+| FileName |	ชื่อไฟล์ |
+| FileSize |	ขนาดไฟล์ (Byte) |
+| INFO | | 	 
+| Name | ชื่อเอกสาร |
+| NumberOfPage | จำนวนหน้าของเอกสาร |
+| mimeType | ประเภทไฟล์ |
+| Hashes | แฮชไฟล์สำหรับตรวจสอบ |
+| Result | ไฟล์ในรูปแบบ Base64 |
 #### 6 [DBD-006-04] API บัญชีรายชื่อผู้ถือหุ้น (แบบรูปภาพ) (image)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/shareholder/image?JuristicID=[JuristicID]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
- 
 
-Response
+**Response**
 
-BODY
+```
 pretty 
 {
 "Type": "Shareholder",
@@ -329,30 +330,35 @@ pretty
 }
 ]
 }
-JSON
- 
+```
 
-คำอธิบายชุดข้อมูล
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-Type	ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective")
-Page	จำนวนหน้าทั้งหมด
-Contents	 
-Page	หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น)
-Total	จำนวนหน้าทั้งหมด(หน้า)
-Type	ประเภทไฟล์
-Size	ขนาดไฟล์(byte)
-Data	ไฟล์ในรูปแบบ Base64 
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| Type | ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective") |
+| Page | จำนวนหน้าทั้งหมด |
+| Contents | | 
+| Page	| หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น) |
+| Total	| จำนวนหน้าทั้งหมด(หน้า) |
+| Type	| ประเภทไฟล์ |
+| Size	| ขนาดไฟล์(byte) |
+| Data | ไฟล์ในรูปแบบ Base64 |
 
 #### 7 [DBD-007-04] API ข้อมูลงบการเงิน (แบบข้อความ) (text)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/financial?JuristicID=[JuristicID]&Year=[Year]
+```
+
 JuristicID  คือ เลขทะเบียนนิติบุคคล
 Year         คือ  ปี พ.ศ. ของงบการเงินที่ต้องการเรียกข้อมูล
-Response
 
+**Response**
+
+```
 {
   "JuristicID": "01055491xxxxx",
   "RegisterCapital": "1000000",
@@ -375,58 +381,55 @@ Response
   "TotalRevenue": "9575429.13",
   "StatementYear": "2556"
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-JuristicID  	เลขทะเบียนนิติบุคคล
-RegisterCapital 	 ทุนจดทะเบียน 
-AccountReceivable 	ลูกหนี้การค้าและตั๋วเงินรับสุทธิ
-CurrentLiabilities 	รวมหนี้สินหมุนเวียน
-Inventory 	สินค้าคงเหลือ 
-PaidUpCapital	ทุนเรียกชำระแล้ว
-ProperTREquipment 	ที่ดิน อาคารและอุปกรณ์สุทธิ
-ShareholderEquity  	รวมส่วนของผู้เป็นหุ้นส่วน/ผู้ถือหุ้น
-TotalAsset  	รวมทรัพย์สิน
-TotalCurrentAsset 	รวมสินทรัพย์หมุนเวียน
-TotalLiabilities 	รวมหนี้สิน
-AdminExpenses 	ค่าใช้จ่ายในการขายและบริการ
-CostOfGoodsSold 	ต้นทุนขาย 
-EarningPerShare  	กำไรต่อหุ้น 
-IncomeTax 	 ภาษีเงินได้ 
-InterestExpenses  	ดอกเบี้ยจ่าย
-NetProfit  	กำไร (ขาดทุนสุทธิ)
-SaleRevenue  	รายได้หลัก
-TotalRevenue  	รวมรายได้ 
-StatementYear  	ปี พ.ศ. ของงบการเงิน
+**คำอธิบายชุดข้อมูล**
 
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| JuristicID | เลขทะเบียนนิติบุคคล |
+| RegisterCapital | ทุนจดทะเบียน |
+| AccountReceivable | ลูกหนี้การค้าและตั๋วเงินรับสุทธิ | 
+| CurrentLiabilities | รวมหนี้สินหมุนเวียน |
+| Inventory | สินค้าคงเหลือ |
+| PaidUpCapital	| ทุนเรียกชำระแล้ว |
+| ProperTREquipment | ที่ดิน อาคารและอุปกรณ์สุทธิ |
+| ShareholderEquity | รวมส่วนของผู้เป็นหุ้นส่วน/ผู้ถือหุ้น |
+| TotalAsset | รวมทรัพย์สิน |
+| TotalCurrentAsset | รวมสินทรัพย์หมุนเวียน |
+| TotalLiabilities | รวมหนี้สิน |
+| AdminExpenses | ค่าใช้จ่ายในการขายและบริการ |
+| CostOfGoodsSold | ต้นทุนขาย |
+| EarningPerShare | กำไรต่อหุ้น |
+| IncomeTax | ภาษีเงินได้ |
+| InterestExpenses | ดอกเบี้ยจ่าย |
+| NetProfit | กำไร (ขาดทุนสุทธิ) |
+| SaleRevenue | รายได้หลัก |
+| TotalRevenue  |	รวมรายได้ |
+| StatementYear | ปี พ.ศ. ของงบการเงิน |
 #### 8 [DBD-008-04] API ข้อมูลงบการเงิน (แบบข้อความในรูปแบบรูปแบบ pdf) (text-pdf)
   
 (อยู่ระหว่าง DBD ปรับปรุงเป็นเวอร์ชันใหม่)
 
 API
 
- 
-
- 
-
 Response
 
- 
-
- 
-
 คำอธิบายชุดข้อมูล
-
 #### 9 [DBD-009-04] API ข้อมูลงบการเงิน (แบบรูปภาพในรูปแบบ pdf) (image-pdf)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/financial/image/pdf?JuristicID=[JuristicID]&Year=[Year]
-JuristicID คือ เลขทะเบียนนิติบุคคล
-Year         คือ  ปี พ.ศ. ของงบการเงินที่ต้องการเรียกข้อมูล
-Response
+```
 
+JuristicID คือ เลขทะเบียนนิติบุคคล 
+Year         คือ  ปี พ.ศ. ของงบการเงินที่ต้องการเรียกข้อมูล
+
+**Response**
+
+```
 {
   "ID": "010555917XXXX",
   "FileName": "010555917XXXX-ข้อมูลงบการเงิน (V4) (รูปภาพ)-Certificate_20201028112450.pdf",
@@ -439,32 +442,35 @@ Response
   "Hashes": "D6ADCBFEEDF694781C21B89135442152",
   "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC9TaWcvVChTa..."
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-ID  	เลขนิติบุคคล 
-FileName  	ชื่อไฟล์ 
-FileSize  	ขนาดไฟล์ (Byte)
-INFO	 
-Name  	ชื่อเอกสาร 
-NumberOfPage  	จำนวนหน้าทั้งหมดของเอกสาร
-mimeType  	ประเภทไฟล์
-Hashes  	แฮชไฟล์สำหรับตรวจสอบ
-Result  	ไฟล์ในรูปแบบ Base64
+**คำอธิบายชุดข้อมูล**
 
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- | 
+| ID | เลขนิติบุคคล |
+| FileName | ชื่อไฟล์ |
+| FileSize | ขนาดไฟล์ (Byte) |
+| INFO | |
+| Name |	ชื่อเอกสาร |
+| NumberOfPage | 	จำนวนหน้าทั้งหมดของเอกสาร |
+| mimeType | 	ประเภทไฟล์ |
+| Hashes |	แฮชไฟล์สำหรับตรวจสอบ |
+| Result |  	ไฟล์ในรูปแบบ Base64 |
 #### 10 [DBD-010-04] API ข้อมูลงบการเงิน (แบบรูปภาพ) (image)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/financial/image?JuristicID=[JuristicID]&Year=[Year]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
 Year คือ ปี พ.ศ.
- 
 
-Response
+**Response**
 
-Body
+```
 {
 "Type":"Financial",
 "Page":10,
@@ -478,29 +484,34 @@ Body
 }
 ]
 }
-JSON
- 
+```
 
-คำอธิบายชุดข้อมูล
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-Type	ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective")
-Page	จำนวนหน้าทั้งหมด
-Contents	 
-Page	หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น)
-Total	จำนวนหน้าทั้งหมด(หน้า)
-Type	ประเภทไฟล์
-Size	ขนาดไฟล์(byte)
-Data	ไฟล์ในรูปแบบ Base64 
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| Type | ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective") |
+| Page | จำนวนหน้าทั้งหมด |
+| Contents | | 
+| Page	| หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น) |
+| Total	| จำนวนหน้าทั้งหมด(หน้า) |
+| Type |	ประเภทไฟล์ |
+| Size |	ขนาดไฟล์(byte) |
+| Data	| ไฟล์ในรูปแบบ Base64 |
 
 #### 11 [DBD-011-04] API ข้อมูลหนังสือบริคณห์สนธิ และเอกสารประกอบ (แบบรูปภาพในรูปแบบ pdf) (image-pdf)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/borikon/image/pdf?JuristicID=JuristicID
-JuristicID คือ เลขทะเบียนนิติบุคคล
-Response
+```
 
+JuristicID คือ เลขทะเบียนนิติบุคคล
+
+**Response**
+
+```
 {
   "ID": "0000000000001",
   "FileName": "0000000000001-ข้อมูลบริคณห์สนธิ (V4) รูปภาพ-Certificate_20201022134413.pdf",
@@ -513,28 +524,35 @@ Response
   "Hashes": "95F2FA460C13E56B415F2DD0373E68FB",
   "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC9T....."
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-ID	เลขนิติบุคคล
-FileName	ชื่อไฟล์
-FileSize	ขนาดไฟล์ (Byte)
-INFO	 
-Name	ชื่อเอกสาร
-NumberOfPage	จำนวนหน้าของเอกสาร
-mimeType	ประเภทไฟล์
-Hashes	แฮชไฟล์สำหรับตรวจสอบ
-Result	ไฟล์ในรูปแบบ Base64
+**คำอธิบายชุดข้อมูล**
+
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| ID | เลขนิติบุคคล |
+| FileName	| ชื่อไฟล์ |
+| FileSize | ขนาดไฟล์ (Byte) |
+| INFO | |
+| Name | ชื่อเอกสาร |
+| NumberOfPage | จำนวนหน้าของเอกสาร |
+| mimeType | ประเภทไฟล์ |
+| Hashes | แฮชไฟล์สำหรับตรวจสอบ |
+| Result | ไฟล์ในรูปแบบ Base64 |
 
 #### 12 [DBD-012-04] API ข้อมูลหนังสือบริคณห์สนธิ และเอกสารประกอบ (แบบรูปภาพ) (image)
   
 API
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/borikon/image?JuristicID=JuristicID
-JuristicID คือ เลขทะเบียนนิติบุคคล
-Response
+```
 
+JuristicID คือ เลขทะเบียนนิติบุคคล
+
+**Response**
+
+```
 {
   "Type": "Borikon",
   "Page": 2,
@@ -548,30 +566,34 @@ Response
     }
   ]
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-Type	ชื่อไฟล์
-Page	จำนวนหน้าทั้งหมด
-Content	 
-Page	หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น)
-Total	จำนวนหน้าทั้งหมด(หน้า)
-Type	ประเภทไฟล์
-Size	ขนาดไฟล์(byte)
-Data	ไฟล์ในรูปแบบ Base64
+**คำอธิบายชุดข้อมูล**
+
+| รายการข้อมูล	| คำอธิบาย |
+| -- | -- |
+| Type	| ชื่อไฟล์ |
+| Page | จำนวนหน้าทั้งหมด |
+| Content	| |
+| Page | หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น) |
+| Total | จำนวนหน้าทั้งหมด(หน้า) |
+| Type | ประเภทไฟล์ |
+| Size | ขนาดไฟล์(byte) |
+| Data | ไฟล์ในรูปแบบ Base64 |
 
 #### 13 [DBD-013-04] API ข้อมูลวัตถุประสงค์ (แบบรูปภาพ) (image)
   
-API
+**API**
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/objective/image?JuristicID=[JuristicID]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
  
+**Response**
 
-Response
-
-BODY
+```
 {
 "Type": "Objective",
 "Page": 2,
@@ -585,32 +607,34 @@ BODY
 }
 ]
 }
-JSON
- 
+```
 
-คำอธิบายชุดข้อมูล
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-Type	ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective")
-Page	จำนวนหน้าทั้งหมด
-Contents	 
-Page	หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น)
-Total	จำนวนหน้าทั้งหมด(หน้า)
-Type	ประเภทไฟล์
-Size	ขนาดไฟล์(byte)
-Data	ไฟล์ในรูปแบบ Base64 
+| รายการข้อมูล	| คำอธิบาย |
+| ---| --- |
+| Type	| ประเภทข้อมูล (ข้อมูลชุดนี้คือ "Objective") |
+| Page	| จำนวนหน้าทั้งหมด |
+| Contents | |
+| Page | หน้าของข้อมูลที่แสดง (ข้อมูลชุดนี้จะแสดงทุกหน้า Page จึงเป็น 0 เท่านั้น) |
+| Total	| จำนวนหน้าทั้งหมด(หน้า) |
+| Type | ประเภทไฟล์ |
+| Size | ขนาดไฟล์(byte) |
+| Data | ไฟล์ในรูปแบบ Base64 |
 
 #### 14 [DBD-014-04] API ข้อมูลวัตถุประสงค์ (แบบรูปภาพในรูปแบบ pdf) (image-pdf)
   
 API
 
+```
 http://api.egov.go.th/ws/dbd/juristic/v4/profile/objective/pdf?JuristicID=[JuristicID]
+```
+
 JuristicID คือ เลขทะเบียนนิติบุคคล
  
+**Response**
 
-Response
-
-BODY
+```
 {
 "ID": "0000000000000",
 "FileName": "0000000000000-ข้อมูลวัตถุประสงค์จดทะเบียนนิติบุคคล (รูปภาพ)-Certificate_20191129140702.pdf",
@@ -623,32 +647,34 @@ BODY
 "Hashes": "4B158C5639576E32A668653C6D7BBD88",
 "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC9TaWcvV..."
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
- 
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-ID	เลขทะเบียนนิติบุคคล
-FileName	ชื่อไฟล์
-FileSize	ขนาดไฟล์ (Byte)
-mimeType	ประเภทไฟล์
-Hashes	แฮชไฟล์สำหรับตรวจสอบ
-Result	ไฟล์ในรูปแบบ Base64 
-Info	 
-Name	ชื่อเอกสาร
-NumberOfPage	จำนวนหน้าทั้งหมดของเอกสาร
+| รายการข้อมูล | คำอธิบาย |
+| ID | เลขทะเบียนนิติบุคคล |
+| FileName | ชื่อไฟล์ |
+| FileSize |	ขนาดไฟล์ (Byte) |
+| mimeType | ประเภทไฟล์ |
+| Hashes	| แฮชไฟล์สำหรับตรวจสอบ |
+| Result	| ไฟล์ในรูปแบบ Base64 |
+| Info	 | | 
+| Name	| ชื่อเอกสาร |
+| NumberOfPage	| จำนวนหน้าทั้งหมดของเอกสาร |
 
 #### 15 [DBD-015-04] API ข้อมูลทะเบียนพาณิชย์ (แบบข้อความ) (text)
   
-API
+**API**
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/register?CMNO=[CMNO]
-CMNO คือ เลขทะเบียนพานิชย์
-Response
+```
 
-BODY
-pretty 
+CMNO คือ เลขทะเบียนพานิชย์
+
+**Response**
+
+```
 {
 "ResultList":[
 {
@@ -672,37 +698,34 @@ pretty
 ],
 "RawData": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz...."
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
- 
+**คำอธิบายชุดข้อมูล**
 
-รายการข้อมูล	คำอธิบาย
-OwnName
-ชื่อ นามสกุล เจ้าของ
-Name
-ชื่อนิติบุคคล
-RegisterDate
-ปี พ.ศ. เดือน วัน ที่ลงทะเบียน "YYYYMMDD"
-ObjectDescription
-รายละเอียดวัตถุประสงค์
-CMNO
-เลขทะเบียนพานิชย์
-Address
-ที่อยู่
-OfficeName
-ชื่อหน่วยงานที่จดทะเบียนพานิชย์
-RawData	ข้อมูลต้นฉบับ Base64
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| OwnName | ชื่อ นามสกุล เจ้าของ |
+| Name | ชื่อนิติบุคคล |
+| RegisterDate | ปี พ.ศ. เดือน วัน ที่ลงทะเบียน "YYYYMMDD" |
+| ObjectDescription | รายละเอียดวัตถุประสงค์ |
+| CMNO | เลขทะเบียนพานิชย์ |
+| Address | ที่อยู่ |
+| OfficeName | ชื่อหน่วยงานที่จดทะเบียนพานิชย์ |
+| RawData	| ข้อมูลต้นฉบับ Base64 |
 
 #### 16 [DBD-016-04] API ข้อมูลทะเบียนพาณิชย์ (แบบข้อความในรูปแบบ pdf) (text-pdf)
   
-API
+**API**
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/register/pdf?CMNO=[CMNO]
-CMNO คือ เลขทะเบียนพานิชย์
-Response
+```
 
-BODY
+CMNO คือ เลขทะเบียนพานิชย์
+
+**Response**
+
+```
 {
 "ID": "0000000000000",
 "FileName": "0000000000000-ข้อมูลทะเบียนพานิชย์ (V4)-Certificate_20200103151957.pdf",
@@ -711,26 +734,32 @@ BODY
 "Hashes": "7BA9697C96387FD31EE9D96E61166764",
 "Result": "JVBERi0xLjcKJeLjz9MKMyAwIG9iago8PC9GVC...."
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-ID	เลขทะเบียนนิติบุคคล
-FileName	ชื่อไฟล์
-FileSize	ขนาดไฟล์ (Byte)
-mimeType	ประเภทไฟล์
-Hashes	แฮชไฟล์สำหรับตรวจสอบ
-Result	ไฟล์ในรูปแบบ Base64 
+**คำอธิบายชุดข้อมูล**
+
+| รายการข้อมูล | คำอธิบาย |
+| -- | -- |
+| ID	| เลขทะเบียนนิติบุคคล |
+| FileName | ชื่อไฟล์ |
+| FileSize	| ขนาดไฟล์ (Byte) |
+| mimeType |	ประเภทไฟล์ |
+| Hashes |	แฮชไฟล์สำหรับตรวจสอบ |
+| Result |	ไฟล์ในรูปแบบ Base64 |
 
 #### 17 [DBD-017-04] API หนังสือรับรองและข้อมูลทะเบียนการประกอบธุรกิจของคนต่างด้าว (แบบข้อความ) (text)
   
-API
+**API**
 
+```
 https://api.egov.go.th/ws/dbd/juristic/v4/profile/foreigner?ID=[ID]
-ID คือ เลขทะเบียนนิติบุคคล
-Response
+```
 
-BODY
+ID คือ เลขทะเบียนนิติบุคคล
+
+**Response**
+
+```
 {
 "ResultList":[
 {
@@ -759,53 +788,34 @@ BODY
 ],
 "RawData": "PD94bWwgdmVyc2lvbj0iMS4wIi...";
 }
-JSON
-คำอธิบายชุดข้อมูล
+```
 
-รายการข้อมูล	คำอธิบาย
-Name
-ชื่อใบอนุญาต
-PermitDate
-วันที่อนุญาต
-MinCap
-ทุนจดทะเบียนขั้นต่ำ
-LicenseNo
-เลขที่ใบอนุญาต
-AppID13
-เลขทะเบียน 13 หลัก
-NameTH
-ชื่อผู้ขออนุญาต (ไทย)
-NameEN
-ชื่อผู้ขออนุญาต (อังกฤษ)
-CountryShort
-ประเทศของผู้ถือหุ้นหลัก
-Status
-สถานะใบอนุญาต
-StartDate
-วันที่เริ่ม
-EndDate
-วันที่หมดอายุ
-Address
-ที่ตั้งสำนักงาน
-Tumbon
-ตำบล
-Ampur
-อำเภอ
-Province
-จังหวัด
-CMName
-ชื่อกรรมการ
-DRTextName
-ผู้รับผิดชอบผูกผัน
-BizDetail1
-ธุรกิจที่ได้รับอนุญาต1
-BizDetail2
-ธุรกิจที่ได้รับอนุญาต2
-BizDetail3
-ธุรกิจที่ได้รับอนุญาต3
-BizDetail4
-ธุรกิจที่ได้รับอนุญาต4
-RawData	ข้อมูลต้นฉบับ Base64
+**คำอธิบายชุดข้อมูล**
+
+| รายการข้อมูล |	คำอธิบาย |
+| -- | -- |
+| Name | ชื่อใบอนุญาต |
+| PermitDate | วันที่อนุญาต |
+| MinCap | ทุนจดทะเบียนขั้นต่ำ |
+| LicenseNo | เลขที่ใบอนุญาต |
+| AppID13 | เลขทะเบียน 13 หลัก |
+| NameTH | ชื่อผู้ขออนุญาต (ไทย) |
+| NameEN | ชื่อผู้ขออนุญาต (อังกฤษ) |
+| CountryShort | ประเทศของผู้ถือหุ้นหลัก |
+| Status | สถานะใบอนุญาต |
+| StartDate | วันที่เริ่ม |
+| EndDate | วันที่หมดอายุ |
+| Address | ที่ตั้งสำนักงาน |
+| Tumbon | ตำบล |
+| Ampur | อำเภอ |
+| Province | จังหวัด |
+| CMName | ชื่อกรรมการ |
+| DRTextName | ผู้รับผิดชอบผูกผัน |
+| BizDetail1 | ธุรกิจที่ได้รับอนุญาต1 |
+| BizDetail2 | ธุรกิจที่ได้รับอนุญาต2 |
+| BizDetail3 | ธุรกิจที่ได้รับอนุญาต3 | 
+| BizDetail4 | ธุรกิจที่ได้รับอนุญาต4 |
+| RawData	| ข้อมูลต้นฉบับ Base64 |
 
 #### 18 [DBD-018-04] API หนังสือรับรองและข้อมูลทะเบียนการประกอบธุรกิจของคนต่างด้าว (แบบข้อความในรูปแบบ pdf) (text-pdf)
   
