@@ -8,8 +8,13 @@ collections:
   - name: 'docs'
     label: 'Documents'
     folder: 'content/docs'
+    nested:
+      depth: 3
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: 
+      encoding: "ascii"
+      clean_accents: true
+      sanitize_replacement: "_"
     editor:
       preview: false
     fields:
