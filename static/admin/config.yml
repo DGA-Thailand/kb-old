@@ -11,7 +11,7 @@ collections:
     nested:
       depth: 3
     create: true
-    slug: {{slug}}
+    slug: "{{slug}}"
     editor:
       preview: false
     fields:
