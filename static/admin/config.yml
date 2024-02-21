@@ -11,10 +11,7 @@ collections:
     nested:
       depth: 3
     create: true
-    slug: 
-      encoding: "ascii"
-      clean_accents: true
-      sanitize_replacement: "_"
+    slug: {{slug}}
     editor:
       preview: false
     fields:
