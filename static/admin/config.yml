@@ -9,7 +9,7 @@ collections:
     label: 'Documents'
     folder: 'content/docs'
     nested:
-      depth: 3
+      depth: 5
     create: true
     slug: "{{slug}}"
     editor:
