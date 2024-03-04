@@ -13,59 +13,35 @@ date: 2024-03-04T09:51:16.331Z
    * API สร้าง BillPayment
    * API ตรวจสอบถานะการรับชำระเงิน
 
-
-
 ### 2 API ขอ Token
 
 การเรียกใช้งานข้อมูลผ่าน Government API มี 2 ขั้นตอน ตัวอย่าง Source Code ดังนี้ \[คลิกเพื่อดูรายละเอียด] 
 
-\| หัวข้อ | รายละเอียด|
-
-\| -- | -- |
-
-\| API \[Production] | https://api.egov.go.th/ws/auth/validate?ConsumerSecret=\[Secret]&AgentID=\[เลขประจำตัวประชาชน] |
-
-\| Method | GET |
-
-
+| หัวข้อ            | รายละเอียด                                                                                     |
+| ----------------- | ---------------------------------------------------------------------------------------------- |
+| API \[Production] | https://api.egov.go.th/ws/auth/validate?ConsumerSecret=\[Secret]&AgentID=\[เลขประจำตัวประชาชน] |
+| Method            | GET                                                                                            |
 
 Request Parameters
 
-รายการข้อมูล	
-
-รายละเอียด
-
-ConsumerSecret
-
-เช่น ConsumerSecret=xxxxxxxxxxxxxx
-
-AgentID
-
-เลขประจำตัวประชาชน 13 หลัก เช่น AgentID=1234567890123
-
-กรณีเรียก API Personal Signing ต้องกำหนด AgentID เป็นเลขประจำตัวประชาชนของผู้เซ็นเอกสารเท่านั้น
+| รายการข้อมูล   | รายละเอียด                                                                                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ConsumerSecret | เช่น ConsumerSecret=xxxxxxxxxxxxxx                                                                                                                         |
+| AgentID        | เลขประจำตัวประชาชน 13 หลัก เช่น AgentID=1234567890123 <br/>กรณีเรียก API Personal Signing ต้องกำหนด AgentID เป็นเลขประจำตัวประชาชนของผู้เซ็นเอกสารเท่านั้น |
 
 Request Header
 
-รายการข้อมูล
-
-รายละเอียด
-
-Consumer-Key
-
-Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้)
+| รายการข้อมูล | รายละเอียด                                                                  |
+| ------------ | --------------------------------------------------------------------------- |
+| Consumer-Key | Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้) |
 
 Response
 
-BODY
 
-{
 
-"Result": "8e1ac089-0000-aaaa-0000-403c0c9ab867"
+```
 
-}
-
-JSON
+```
 
 Response Parameters
 
