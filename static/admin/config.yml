@@ -16,10 +16,8 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-gdx'
     label: 'Docs - GDX'
@@ -29,10 +27,8 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-digitalid'
     label: 'Docs - Digital ID'
@@ -42,10 +38,8 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-sme'
     label: 'Docs - SME'
@@ -55,11 +49,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-edoc'
     label: 'Docs - e-Document'
@@ -69,11 +61,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-epayment'
     label: 'Docs - e-Payment'
@@ -83,11 +73,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-biz'
     label: 'Docs - Biz Portal'
@@ -97,11 +85,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-backend'
     label: 'Docs - Backend'
@@ -111,11 +97,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-info'
     label: 'Docs - Info'
@@ -125,11 +109,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-kiosk'
     label: 'Docs - Kiosk'
@@ -139,11 +121,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-workd'
     label: 'Docs - WorkD'
@@ -153,11 +133,9 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-law'
     label: 'Docs - Law Portal'
@@ -167,9 +145,7 @@ collections:
     editor:
       preview: true
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Title', name: 'Title', widget: 'string' }
       - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
       - { label: 'Body', name: 'body', widget: 'markdown' }
