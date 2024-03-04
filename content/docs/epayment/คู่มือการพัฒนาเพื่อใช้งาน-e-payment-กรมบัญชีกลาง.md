@@ -39,8 +39,11 @@ Response
 
 
 
-```
-
+```json
+BODY
+{
+"Result": "8e1ac089-0000-aaaa-0000-403c0c9ab867"
+}
 ```
 
 Response Parameters
