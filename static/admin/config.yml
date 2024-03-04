@@ -11,6 +11,7 @@ collections:
   - name: 'docs-czp'
     label: 'Docs - CZP'
     folder: 'content/docs/czp'
+    identifier_field: 'Title'
     create: true
     slug: "{{slug}}"
     editor:
@@ -21,6 +22,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-gdx'
     label: 'Docs - GDX'
+    identifier_field: 'Title'
     folder: 'content/docs/gdx'
     create: true
     slug: "{{slug}}"
@@ -32,6 +34,7 @@ collections:
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'docs-digitalid'
     label: 'Docs - Digital ID'
+    identifier_field: 'Title'
     folder: 'content/docs/digital-id'
     create: true
     slug: "{{slug}}"
@@ -46,6 +49,7 @@ collections:
     folder: 'content/docs/sme'
     create: true
     slug: "{{slug}}"
+    identifier_field: 'Title'
     editor:
       preview: true
     fields:
@@ -58,6 +62,7 @@ collections:
     folder: 'content/docs/edoc'
     create: true
     slug: "{{slug}}"
+    identifier_field: 'Title'
     editor:
       preview: true
     fields:
@@ -69,6 +74,7 @@ collections:
     label: 'Docs - e-Payment'
     folder: 'content/docs/epayment'
     create: true
+    identifier_field: 'Title'
     slug: "{{slug}}"
     editor:
       preview: true
@@ -80,6 +86,7 @@ collections:
   - name: 'docs-biz'
     label: 'Docs - Biz Portal'
     folder: 'content/docs/biz'
+    identifier_field: 'Title'
     create: true
     slug: "{{slug}}"
     editor:
@@ -93,6 +100,7 @@ collections:
     label: 'Docs - Backend'
     folder: 'content/docs/backend'
     create: true
+    identifier_field: 'Title'
     slug: "{{slug}}"
     editor:
       preview: true
@@ -105,6 +113,7 @@ collections:
     label: 'Docs - Info'
     folder: 'content/docs/info'
     create: true
+    identifier_field: 'Title'
     slug: "{{slug}}"
     editor:
       preview: true
@@ -118,6 +127,7 @@ collections:
     folder: 'content/docs/kiosk'
     create: true
     slug: "{{slug}}"
+    identifier_field: 'Title'
     editor:
       preview: true
     fields:
@@ -128,6 +138,7 @@ collections:
   - name: 'docs-workd'
     label: 'Docs - WorkD'
     folder: 'content/docs/workd'
+    identifier_field: 'Title'
     create: true
     slug: "{{slug}}"
     editor:
@@ -140,6 +151,7 @@ collections:
   - name: 'docs-law'
     label: 'Docs - Law Portal'
     folder: 'content/docs/law'
+    identifier_field: 'Title'
     create: true
     slug: "{{slug}}"
     editor:
