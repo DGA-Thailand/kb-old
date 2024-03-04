@@ -1,7 +1,6 @@
-+++
-Title = "e-Document"
-weight = 30
-+++
-
-การลงทะเบียน SME เพื่อขอรับบริการภาครัฐ (SME ONE ID) จากระบบ BizPortal
-  
+---
+Title: e-Payment
+weight: 30
+date: 2024-03-04T09:50:42.850Z
+---
+แนวทางการรับชำระค่าธรรมเนียม ค่าบริการแบบ DGA e-Payment Platform ผ่านระบบรับชำระกลางกรมบัญชีกลางผ่าน BizPortal และผ่านธนาคาร
