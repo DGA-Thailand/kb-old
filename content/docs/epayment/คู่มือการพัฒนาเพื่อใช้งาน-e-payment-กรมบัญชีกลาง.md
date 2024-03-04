@@ -37,8 +37,6 @@ Request Header
 
 Response
 
-
-
 ```json
 BODY
 {
@@ -48,339 +46,140 @@ BODY
 
 Response Parameters
 
-รายการข้อมูล
+| รายการข้อมูล | รายละเอียด                                                                                                                                                                   |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Result       | Token String สำหรับใช้ในการเรียก API ต่างๆ <br />(กรณีขอ Token ไม่สำเร็จ หรือ error อื่นๆ ให้ทำการเรียก API ใหม่อีกครั้ง จนกว่าจะได้ Token ไปใช้เรียกเรียกร่วมกับ API อื่นๆ) |
 
-รายละเอียด
-
-Result
-
-Token String สำหรับใช้ในการเรียก API ต่างๆ
-
-(กรณีขอ Token ไม่สำเร็จ หรือ error อื่นๆ ให้ทำการเรียก API ใหม่อีกครั้ง จนกว่าจะได้ Token ไปใช้เรียกเรียกร่วมกับ API อื่นๆ)
-
-3 API สร้าง Bill Payment
+### 3 API สร้าง Bill Payment
 
 https://trial.dga.or.th/e-payment/api/docs/index.html
 
-API \[Production]
-
-https://api.egov.go.th/ws/dga/payment/create
-
-API \[Test]
-
-https://api.egov.go.th/ws/dga/uat/payment/create
-
-Method
-
-POST
+| รายการข้อมูล      | รายละเอียด                                       |
+| ----------------- | ------------------------------------------------ |
+| API \[Production] | https://api.egov.go.th/ws/dga/payment/create     |
+| API \[Test]       | https://api.egov.go.th/ws/dga/uat/payment/create |
+| Method            | POST                                             |
 
 Request Headers
 
-รายการข้อมูล
-
-รายละเอียด
-
-Consumer-Key
-
-Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้)
-
-Token
-
-Token String ที่ได้จากการ API ขอ Token
-
-Content-Type
-
-กำหนดค่าดังนี้ : application/json
+| รายการข้อมูล | รายละเอียด                                                                  |
+| ------------ | --------------------------------------------------------------------------- |
+| Consumer-Key | Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้) |
+| Token        | Token String ที่ได้จากการ API ขอ Token                                      |
+| Content-Type | กำหนดค่าดังนี้ : application/json                                           |
 
 Request Body
 
+```json
 Body{
-
-\    "source": "หน่วยงาน",
-
-\    "customerID": "7997085658966",
-
-\    "customerTitleName": "นาย",
-
-\    "customerFirstName": "Biz",
-
-\    "customerMiddleName": "",
-
-\    "customerLastName": "User",
-
-\    "bankCode": "CGD",
-
-\    "paymentType": "BillPayment",
-
-\    "amount": "10000",
-
-\    "requestReference1": "C640810399",
-
-\    "requestReference2": "",
-
-\    "requestReference3": "",
-
-\    "data": {
-
-\    "username": "xxxxxxxx",
-
-\    "password": "xxxxxxxxxx",
-
-\    "orgNameEN": "Bangrak District  Office",
-
-\    "orgNameTH": "สำนักงานเขตบางรัก",
-
-\    "orgPhoneNumber": "+6622361395 ต่อ/ext. 6205-8",
-
-\    "invoiceStartDate": "2021-08-11T10:37:13.13+07:00",
-
-\    "invoiceEndDate": "2021-08-30T07:00:00.00+07:00",
-
-\    "houseNo": "1",
-
-\    "buildingName": "",
-
-\    "moo": "",
-
-\    "soi": "",
-
-\    "road": "",
-
-\    "tambonCode": "10040500",
-
-\    "amphurCode": "10040000",
-
-\    "provinceCode": "10000000",
-
-\    "postcode": "10500",
-
-\    "mobileNo": "0881852361",
-
-\    "email": "test@abc.or.th",
-
-\    "catalogs": [
-
-\    {
-
-\    "costCenterCode": "2100700004",
-
-\    "costCenterCodeDesc": "ฝ่ายคลัง",
-
-\    "catalogCode": "2100700033",
-
-\    "catalogName": "ค่าธรรมเนียมใบอนุญาต",
-
-\    "catalogDesc": "รายละเอียดค่าธรรมเนียมใบอนุญาต",
-
-\    "amount": "10000"
-
-\    }
-
-\    ]
-
-\    }
-
+    "source": "หน่วยงาน",
+    "customerID": "7997085658966",
+    "customerTitleName": "นาย",
+    "customerFirstName": "Biz",
+    "customerMiddleName": "",
+    "customerLastName": "User",
+    "bankCode": "CGD",
+    "paymentType": "BillPayment",
+    "amount": "10000",
+    "requestReference1": "C640810399",
+    "requestReference2": "",
+    "requestReference3": "",
+    "data": {
+        "username": "xxxxxxxx",
+        "password": "xxxxxxxxxx",
+        "orgNameEN": "Bangrak District  Office",
+        "orgNameTH": "สำนักงานเขตบางรัก",
+        "orgPhoneNumber": "+6622361395 ต่อ/ext. 6205-8",
+        "invoiceStartDate": "2021-08-11T10:37:13.13+07:00",
+        "invoiceEndDate": "2021-08-30T07:00:00.00+07:00",
+        "houseNo": "1",
+        "buildingName": "",
+        "moo": "",
+        "soi": "",
+        "road": "",
+        "tambonCode": "10040500",
+        "amphurCode": "10040000",
+        "provinceCode": "10000000",
+        "postcode": "10500",
+        "mobileNo": "0881852361",
+        "email": "test@abc.or.th",
+        "catalogs": [
+            {
+                "costCenterCode": "2100700004",
+                "costCenterCodeDesc": "ฝ่ายคลัง",
+                "catalogCode": "2100700033",
+                "catalogName": "ค่าธรรมเนียมใบอนุญาต",
+                "catalogDesc": "รายละเอียดค่าธรรมเนียมใบอนุญาต",
+                "amount": "10000"
+            }
+        ]
+    }
 }
-
-Markup
+```
 
 Request Body Parameters
 
-รายการข้อมูล
-
-รายละเอียด
-
-source
-
- ชื่อหน่วยงาน เช่น "DGA"
-
-Require
-
-customerID
-
-เช่น "7997085658966"	
-
-Require
-
-customerTitleName
-
-คำนำหน้าชื่อ เช่น "นาย"
-
-Require
-
-customerFirstName
-
-ชื่อ 
-
-Require
-
-customerMiddleName
-
-ชื่อกลาง
-
-Require
-
-customerLastName
-
-นามสกุล
-
-bankCode
-
-กำหนดค่าเป็น "CGD"
-
-paymentType
-
-กำหนดค่าเป็น "BillPayment"
-
-amount
-
-10000	
-
-requestReference1
-
- เช่น "C640810399"
-
-requestReference2
-
-requestReference3
-
-data
-
-username
-
-Username กรมบัญชีกลาง (สำหรับทดสอบติดต่อ สพร.)
-
-password
-
-รหัสผ่าน กรมบัญชีกลาง (สำหรับทดสอบติดต่อ สพร.)
-
-orgNameEN
-
-ชื่อหน่วยงานภาษาอังกฤษ เช่น "Bangrak District  Office"
-
-orgNameTH
-
-ชื่อหน่วยงานภาษาไทย เช่น "สำนักงานเขตบางรัก"
-
-orgPhoneNumber
-
-หมายเลขโทรศัพท์ เช่น "+6622361395 ต่อ/ext. 6205-8"
-
-invoiceStartDate
-
-วันที่เริ่มชำระเงิน เช่น "2021-08-11T10:37:13.13+07:00"
-
-invoiceEndDate
-
-วันที่สิ้นสุดการชำระเงิน เช่น "2021-08-30T07:00:00.00+07:00"
-
-houseNo
-
-เลขที่บ้าน เช่น "1"
-
-buildingName
-
-ชื่ออาคาร
-
-moo
-
-หมู่ที่
-
-soi
-
-ซอย
-
-road
-
-ถนน
-
-tambonCode
-
-รหัสตำบล เช่น "10040500" \[ดู Address Code]
-
-amphurCode
-
-รหัสอำเภอ เช่น "10040000"
-
-provinceCode
-
-รหัสจังหวัด เช่น "10000000"
-
-postcode
-
-รหัสไปรษณีย์ เช่น "10500"
-
-mobileNo
-
-หมายเลขโทรศัพท์
-
-email
-
-อีเมล์
-
-catalogs
-
-costCenterCode
-
-รหัสศูนย์ต้นทุน ที่กำหนดไว้กับกรมบัญชีกลาง เช่น "2100700004"
-
-costCenterCodeDesc
-
-ชื่อศูนย์ต้นทุน ที่กำหนดไว้กับกรมบัญชีกลาง เช่น "ฝ่ายคลัง"
-
-catalogCode
-
-รหัสรายการรับชำระ เช่น "2100700033"
-
-catalogName
-
-ชื่อรายการรับชำระ ต้องตรงกับที่สร้างไว้ใน catalog ของกรมบัญชีกลางเท่านั้น
-
-catalogDesc
-
-รายละเอียดรายการรับชำระ เช่น "ค่าธรรมเนียมใบอนุญาต"
-
-amount
-
-จำนวนเงิน(บาท) เช่น "10000"
+| รายการข้อมูล       | รายละเอียด                                                                |         |     |
+| ------------------ | ------------------------------------------------------------------------- | ------- | --- |
+| source             | ชื่อหน่วยงาน เช่น "DGA"                                                   | Require |     |
+| customerID         | เช่น "7997085658966"                                                      | Require |     |
+| customerTitleName  | คำนำหน้าชื่อ เช่น "นาย"                                                   | Require |     |
+| customerFirstName  | ชื่อ                                                                      | Require |     |
+| customerMiddleName | ชื่อกลาง                                                                  | Require |     |
+| customerLastName   | นามสกุล                                                                   |         |     |
+| bankCode           | กำหนดค่าเป็น "CGD"                                                        |         |     |
+| paymentType        | กำหนดค่าเป็น "BillPayment"                                                |         |     |
+| amount             | 10000                                                                     |         |     |
+| requestReference1  | เช่น "C640810399"                                                         |         |     |
+| requestReference2  | requestReference3                                                         |         |     |
+| data               |                                                                           |         |     |
+| username           | Username กรมบัญชีกลาง (สำหรับทดสอบติดต่อ สพร.)                            |         |     |
+| password           | รหัสผ่าน กรมบัญชีกลาง (สำหรับทดสอบติดต่อ สพร.)                            |         |     |
+| orgNameEN          | ชื่อหน่วยงานภาษาอังกฤษ เช่น "Bangrak District  Office"                    |         |     |
+| orgNameTH          | ชื่อหน่วยงานภาษาไทย เช่น "สำนักงานเขตบางรัก"                              |         |     |
+| orgPhoneNumber     | หมายเลขโทรศัพท์ เช่น "+6622361395 ต่อ/ext. 6205-8"                        |         |     |
+| invoiceStartDate   | วันที่เริ่มชำระเงิน เช่น "2021-08-11T10:37:13.13+07:00"                   |         |     |
+| invoiceEndDate     | วันที่สิ้นสุดการชำระเงิน เช่น "2021-08-30T07:00:00.00+07:00"              |         |     |
+| houseNo            | เลขที่บ้าน เช่น "1"                                                       |         |     |
+| buildingName       | ชื่ออาคาร                                                                 |         |     |
+| moo                | หมู่ที่                                                                   |         |     |
+| soi                | ซอย                                                                       |         |     |
+| road               | ถนน                                                                       |         |     |
+| tambonCode         | รหัสตำบล เช่น "10040500" \[ดู Address Code]                               |         |     |
+| amphurCode         | รหัสอำเภอ เช่น "10040000"                                                 |         |     |
+| provinceCode       | รหัสจังหวัด เช่น "10000000"                                               |         |     |
+| postcode           | รหัสไปรษณีย์ เช่น "10500"                                                 |         |     |
+| mobileNo           | หมายเลขโทรศัพท์                                                           |         |     |
+| email              | อีเมล์                                                                    |         |     |
+| catalogs           |                                                                           |         |     |
+| costCenterCode     | รหัสศูนย์ต้นทุน ที่กำหนดไว้กับกรมบัญชีกลาง เช่น "2100700004"              |         |     |
+| costCenterCodeDesc | ชื่อศูนย์ต้นทุน ที่กำหนดไว้กับกรมบัญชีกลาง เช่น "ฝ่ายคลัง"                |         |     |
+| catalogCode        | รหัสรายการรับชำระ เช่น "2100700033"                                       |         |     |
+| catalogName        | ชื่อรายการรับชำระ ต้องตรงกับที่สร้างไว้ใน catalog ของกรมบัญชีกลางเท่านั้น |         |     |
+| catalogDesc        | รายละเอียดรายการรับชำระ เช่น "ค่าธรรมเนียมใบอนุญาต"                       |         |     |
+| amount             | จำนวนเงิน(บาท) เช่น "10000"                                               |         |     |
 
 Response
 
+```json
 Body{
-
-\    "status": 0,
-
-\    "errorCode": null,
-
-\    "message": "Success",
-
-\    "data":{
-
-\    "billPaymentFileUrl": "http://ws.ega.or.th/e-payment/api/file/61274f0970b8b30b547b1901",
-
-\    "billPaymentBase64String": "JVBERi0xLjQ.........e19/Lrrf4OWU2DiAmmOXJ/EIVPRgo=",
-
-\    "billPaymentContentType": "application/pdf",
-
-\    "billPaymentFileSize": 264263,
-
-\    "billPaymentFileName": "C640810399.pdf",
-
-\    "billerID": "000000000000003",
-
-\    "billNo": "21082600000003",
-
-\    "reference1": "2108260000000003",
-
-\    "reference2": "21080003",
-
-\    "reference3": null
-
-\    }
-
+    "status": 0,
+    "errorCode": null,
+    "message": "Success",
+    "data":{
+        "billPaymentFileUrl": "http://ws.ega.or.th/e-payment/api/file/61274f0970b8b30b547b1901",
+        "billPaymentBase64String": "JVBERi0xLjQ.........e19/Lrrf4OWU2DiAmmOXJ/EIVPRgo=",
+        "billPaymentContentType": "application/pdf",
+        "billPaymentFileSize": 264263,
+        "billPaymentFileName": "C640810399.pdf",
+        "billerID": "000000000000003",
+        "billNo": "21082600000003",
+        "reference1": "2108260000000003",
+        "reference2": "21080003",
+        "reference3": null
+    }
 }
-
-JSON
+```
 
 Response Parameters
 
