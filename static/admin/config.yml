@@ -2,20 +2,173 @@ backend:
   name: github
   repo: DGA-Thailand/kb
   branch: main # Branch to update (optional; defaults to master)
-media_folder: static/images
-public_folder: /images
+media_folder: static/files
+public_folder: /files
+slug:
+  encoding: 'unicode'
+  sanitize_replacement: '-'
 collections:
-  - name: 'docs'
-    label: 'Documents'
-    folder: 'content/docs'
-    nested:
-      depth: 5
+  - name: 'docs-czp'
+    label: 'Docs - CZP'
+    folder: 'content/docs/czp'
     create: true
     slug: "{{slug}}"
     editor:
-      preview: false
+      preview: true
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-gdx'
+    label: 'Docs - GDX'
+    folder: 'content/docs/gdx'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-digitalid'
+    label: 'Docs - Digital ID'
+    folder: 'content/docs/digital-id'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-sme'
+    label: 'Docs - SME'
+    folder: 'content/docs/sme'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-edoc'
+    label: 'Docs - e-Document'
+    folder: 'content/docs/edoc'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-epayment'
+    label: 'Docs - e-Payment'
+    folder: 'content/docs/epayment'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-biz'
+    label: 'Docs - Biz Portal'
+    folder: 'content/docs/biz'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-backend'
+    label: 'Docs - Backend'
+    folder: 'content/docs/backend'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-info'
+    label: 'Docs - Info'
+    folder: 'content/docs/info'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-kiosk'
+    label: 'Docs - Kiosk'
+    folder: 'content/docs/kiosk'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-workd'
+    label: 'Docs - WorkD'
+    folder: 'content/docs/workd'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'docs-law'
+    label: 'Docs - Law Portal'
+    folder: 'content/docs/law'
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Tags', name: 'tags', options: ["FAQ", "Code", "CZP", "Digital-ID", "GDX"], widget: "select", multiple: true }
