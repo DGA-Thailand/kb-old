@@ -1,7 +1,6 @@
-+++
-Title = "e-Document"
-weight = 30
-+++
-
-การลงทะเบียน SME เพื่อขอรับบริการภาครัฐ (SME ONE ID) จากระบบ BizPortal
-  
+---
+Title: e-Document
+weight: 30
+date: 2024-03-04T08:58:05.157Z
+---
+การออกเอกสารหลักฐานทางราชการผ่านระบบดิจิทัล (Electronic Document)
