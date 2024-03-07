@@ -183,198 +183,79 @@ Body{
 
 Response Parameters
 
-รายการข้อมูล
+| รายการข้อมูล            | รายละเอียด                                                                      |
+| ----------------------- | ------------------------------------------------------------------------------- |
+| status                  | สถานะ เช่น 0                                                                    |
+| errorCode               | error code                                                                      |
+| message                 | คำอธิบาย เช่น "Success"                                                         |
+| data                    |                                                                                 |
+| billPaymentFileUrl      | URL Bill Payment เช่น "http://ws.ega.or.th/e-payment/api/file/0000000000000000" |
+| billPaymentBase64String | Bill Payment Base64                                                             |
+| billPaymentContentType  | File type เช่น "application/pdf"                                                |
+| billPaymentFileSize     | ขนาด File(Byte) เช่น 264263                                                     |
+| billPaymentFileName     | ชื่อ File เช่น 000000000000.pdf                                                 |
+| billerID                | เช่น "000000000000003"                                                          |
+| billNo                  | เช่น "21082600000003"                                                           |
+| reference1              | หมายเลขอ้างอิง1                                                                 |
+| reference2              | หมายเลขอ้างอิง2                                                                 |
+| reference3              | หมายเลขอ้างอิง3                                                                 |
 
-รายละเอียด
+#### 4 API ตรวจสอบสถานะการรับชำระเงิน
 
-status
-
-สถานะ เช่น 0
-
-"BillPaymentFileName": "C640810399.pdf", "BillerID": "000000000000003", "BillNo": "21082600000003", "Reference1": "2108260000000003", "Reference2": "21080003", "Reference3": null
-
-errorCode
-
-error code
-
-message
-
-คำอธิบาย เช่น "Success"
-
-data
-
-billPaymentFileUrl
-
-URL Bill Payment เช่น "http://ws.ega.or.th/e-payment/api/file/0000000000000000"
-
-billPaymentBase64String
-
-Bill Payment Base64
-
-billPaymentContentType
-
-File type เช่น "application/pdf"
-
-billPaymentFileSize
-
-ขนาด File(Byte) เช่น 264263
-
-billPaymentFileName
-
-ชื่อ File เช่น 000000000000.pdf
-
-billerID
-
-เช่น "000000000000003"
-
-billNo
-
-เช่น "21082600000003"
-
-reference1
-
-หมายเลขอ้างอิง1
-
-reference2	
-
-หมายเลขอ้างอิง2
-
-reference3	
-
-หมายเลขอ้างอิง3
-
-address_code.xlsx
-
-4 API ตรวจสอบสถานะการรับชำระเงิน
-
-API \[Production]
-
-https://api.egov.go.th/ws/dga/payment/status?reference1=0000000000000000&reference2=00000000
-
-API \[TEST]
-
-https://api.egov.go.th/ws/dga/uat/payment/status?reference1=0000000000000000&reference2=00000000
-
-Method
-
-GET
+| API \[Production] | https://api.egov.go.th/ws/dga/payment/status?reference1=0000000000000000&reference2=00000000     |
+| ----------------- | ------------------------------------------------------------------------------------------------ |
+| API \[TEST]       | https://api.egov.go.th/ws/dga/uat/payment/status?reference1=0000000000000000&reference2=00000000 |
+| Method            | GET                                                                                              |
 
 Request Parameters
 
-รายการข้อมูล	
-
-รายละเอียด
-
-reference1
-
-หมายเลขอ้างอิง1 เช่น reference1=0000000000000000
-
-reference2
-
-หมายเลขอ้างอิง2 เช่น reference2=00000000
+| รายการข้อมูล | รายละเอียด                                       |
+| ------------ | ------------------------------------------------ |
+| reference1   | หมายเลขอ้างอิง1 เช่น reference1=0000000000000000 |
+| reference2   | หมายเลขอ้างอิง2 เช่น reference2=00000000         |
 
 Request Header
 
-รายการข้อมูล
-
-รายละเอียด
-
-Consumer-Key
-
-Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้)
-
-Content-Type
-
-กำหนดค่าดังนี้ : application/json
+| รายการข้อมูล | รายละเอียด                                                                  |
+| ------------ | --------------------------------------------------------------------------- |
+| Consumer-Key | Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้) |
+| Content-Type | กำหนดค่าดังนี้ : application/json                                           |
 
 Response
 
+```json
 Body{
-
-\    "status": 0,
-
-\    "errorCode": null,
-
-\    "message": "\[200] สำเร็จแต่ไม่ยืนยันผลการชำระเงินจากกรมบัญชีกลางได้เนื่องจาก CGD firewall หมดอายุ",
-
-\    "data":{
-
-\    "paidStatus": "Success",
-
-\    "description": "ชำระเงินสำเร็จ",
-
-\    "paidDate": "2021-08-26T08:27:34.713Z",
-
-\    "paidChannel": null,
-
-\    "paidSource": null,
-
-\    "confirmPaidDate": "2021-08-26T08:27:34.714Z",
-
-\    "invoiceCode": null,
-
-\    "receiptCode": null,
-
-\    "receiptedDate": null
-
-\    }
-
+    "status": 0,
+    "errorCode": null,
+    "message": "\[200] สำเร็จแต่ไม่ยืนยันผลการชำระเงินจากกรมบัญชีกลางได้เนื่องจาก CGD firewall หมดอายุ",
+    "data":{
+    "paidStatus": "Success",
+    "description": "ชำระเงินสำเร็จ",
+    "paidDate": "2021-08-26T08:27:34.713Z",
+    "paidChannel": null,
+    "paidSource": null,
+    "confirmPaidDate": "2021-08-26T08:27:34.714Z",
+    "invoiceCode": null,
+    "receiptCode": null,
+    "receiptedDate": null
+    }
 }
-
-JSON
+```
 
 Response Parameters
 
-รายการข้อมูล
-
-รายละเอียด
-
-status
-
-สถานะ เช่น 0
-
-errorCode
-
-error code
-
-message
-
-เช่น "\[200] สำเร็จแต่ไม่ยืนยันผลการชำระเงินจากกรมบัญชีกลางได้เนื่องจาก CGD firewall หมดอายุ"
-
-data
-
-paidStatus
-
-สถานะการรับชำระ เช่น "Success"
-
-description
-
-รายละเอียดสถานะการรับชำระเงิน เช่น "ชำระเงินสำเร็จ"
-
-paidDate
-
-วันที่ชำระเงิน เช่น "2021-08-26T08:27:34.713Z"
-
-paidChannel
-
-ช่องทางการรับชำระเงิน
-
-paidSource
-
-PaidSource
-
-confirmPaidDate
-
-วันที่ยืนยันการรับชำระเงิน เช่น "2021-08-26T08:27:34.714Z"
-
-invoiceCode
-
-InvoiceCode
-
-receiptCode
-
-ReceiptCode
-
-receiptedDate
-
-ReceiptedDate
+| รายการข้อมูล | รายละเอียด |
+| -- | -- |
+| status | สถานะ เช่น 0 |
+| errorCode | error code |
+| message | เช่น "\[200] สำเร็จแต่ไม่ยืนยันผลการชำระเงินจากกรมบัญชีกลางได้เนื่องจาก CGD firewall หมดอายุ" |
+| data | |
+| paidStatus | สถานะการรับชำระ เช่น "Success" |
+| description | รายละเอียดสถานะการรับชำระเงิน เช่น "ชำระเงินสำเร็จ" |
+| paidDate | วันที่ชำระเงิน เช่น "2021-08-26T08:27:34.713Z" |
+| paidChannel | ช่องทางการรับชำระเงิน |
+| paidSource | PaidSource |
+| confirmPaidDate | วันที่ยืนยันการรับชำระเงิน เช่น "2021-08-26T08:27:34.714Z" |
+| invoiceCode | InvoiceCode |
+| receiptCode | ReceiptCode |
+| receiptedDate | ReceiptedDate |
