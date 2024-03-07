@@ -24,9 +24,12 @@ title = "Projects"
 5. [ระบบกลางทางกฎหมาย](/docs/law)
 6. [ตู้บริการเอนกประสงค์ภาครัฐ (Government Smart Kiosk)](/docs/kiosk)
 
+{{< /tip >}}
 {{< tip "บริการสำหรับเจ้าหน้าที่ของรัฐ" >}}
 
 1. [บริการ WorkD](/docs/workd)
+
+{{< /tip >}}
 
 {{< tip "แพลตฟอร์มการแลกเปลี่ยนข้อมูล และ Micro Services" >}}
 
@@ -36,6 +39,7 @@ title = "Projects"
 4. [ระบบ DGA Digital ID](/docs/digitalid)
 5. [ระบบสนับสนุนการให้บริการ (Backend)](/docs/backend)
 
+{{< /tip >}}
 
 {{< button "/docs/" "Read the Docs" >}}
 {{< /column >}}
