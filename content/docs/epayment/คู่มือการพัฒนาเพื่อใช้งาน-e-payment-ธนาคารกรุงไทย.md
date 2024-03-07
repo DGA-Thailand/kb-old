@@ -332,6 +332,7 @@ Request Body
 Request Body Parameters
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- |
 | Reference1 | รหัสอ้างอิงการชำระเงิน 1 | Required |
 | Reference2 | รหัสอ้างอิงการชำระเงิน 2 | Required |
 | PaymentReference | รหัสอ้างอิงที่ได้หลังจากการชำระเงิน | Required |
@@ -350,6 +351,7 @@ Response
 Response Parameters
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- |
 | Status | สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก) | 
 | ErrorCode | Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก) |
 | Message | คำอธิบายสถานะการเรียกใช้งาน service |
@@ -404,6 +406,7 @@ Query String
 Query String Parameters
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- |
 | Reference1 | รหัสอ้างอิงการชำระเงิน 1 | Required |
 | Reference2 | รหัสอ้างอิงการชำระเงิน 2 | Required |
 
@@ -523,6 +526,7 @@ Request Body
 Request Body Parameters
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- |
 | PaidStatus | สถานะการชำระเงิน (ดูสถานะทั้งหมดที่ Appendix : PaymentTransactionStatusEnum คลิก) | Required |
 | Description | คำอธิบายสถานะการชำระเงิน | |
 | PaidDate | วันที่ชำระเงิน (รูปแบบวันที่ : yyyy-MM-ddTHH:mm:ss)  เช่น 2023-01-31T10:00:00 | Required |
