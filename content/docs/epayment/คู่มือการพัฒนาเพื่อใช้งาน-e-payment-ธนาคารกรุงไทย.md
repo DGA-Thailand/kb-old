@@ -159,6 +159,7 @@ Response
 Response Parameters
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- |
 | Status | สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก) |
 | ErrorCode | Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก) |
 | Message | คำอธิบายสถานะการเรียกใช้งาน service |
@@ -238,6 +239,7 @@ Response
 Request Header
 
 | รายการข้อมูล | รายละเอียด |
+| -- | -- | 
 | Consumer-Key | Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้) |
 | Token | Token String ที่ได้จากการ API ขอ Token |
 | Content-Type | กำหนดค่าดังนี้ : application/json |
@@ -253,251 +255,129 @@ Request Body
 
 Request Body Parameters
 
-รายการข้อมูล	
-
-รายละเอียด
-
-Reference1
-
-รหัสอ้างอิงการชำระเงิน 1
-
-Required
-
-Reference2
-
-รหัสอ้างอิงการชำระเงิน 2
-
-Required
+| รายการข้อมูล | รายละเอียด | |
+| Reference1 | รหัสอ้างอิงการชำระเงิน 1 | Required |
+| Reference2 | รหัสอ้างอิงการชำระเงิน 2 | Required |
 
 Response
 
+```json
 {
-
-```
 "status": ":ResponseStatusEnum", 
-
 "errorCode": "ErrorCodeEnum", 
-
 "message": "String", 
-
 "data": "Object"
-```
-
 }
-
-JSON
+```
 
 Response Parameters
 
-รายการข้อมูล
-
-รายละเอียด
-
-Status
-
-สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก)
-
-ErrorCode 
-
-Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก)
-
-Message
-
-คำอธิบายสถานะการเรียกใช้งาน service
-
-Data	ข้อมูลเพิ่มเติม (ถ้าไม่มีจะเป็น null)
+| รายการข้อมูล | รายละเอียด |
+| -- | -- |
+| Status | สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก) |
+| ErrorCode | Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก) |
+| Message | คำอธิบายสถานะการเรียกใช้งาน service |
+| Data	| ข้อมูลเพิ่มเติม (ถ้าไม่มีจะเป็น null) |
 
 ตัวอย่างการเรียกใช้งาน
 
+```json
 Request
-
-\[POST] https://api.egov.go.th/ws/dga/dev/payment/close
-
+[POST] https://api.egov.go.th/ws/dga/dev/payment/close
 Content-Type: application/json
-
 Consumer-Key : {{consumerKey}}
-
 Token: {{token}}
 
 {
-
   "reference1" : "12345667789", 
-
   "reference2" : "12345", 
-
 }
 
 Response
 
 {
-
-```
 "status": 0, 
-
 "errorCode": null, 
-
 "message": "Success", 
-
 "data": null
+}
 ```
 
-}
+### 5 API Void Payment (เฉพาะช่องทาง FastPay)
 
-HTTP
-
-5 API Void Payment (เฉพาะช่องทาง FastPay)
-
-API \[Production]
-
-https://api.egov.go.th/ws/dga/payment/void
-
-API \[UAT]
-
-https://api.egov.go.th/ws/dga/uat/payment/void
-
-API \[Test]
-
-https://api.egov.go.th/ws/dga/dev/payment/void
-
-Method
-
-POST
+| API [Production] | https://api.egov.go.th/ws/dga/payment/void |
+| -- | -- |
+| API [UAT] | https://api.egov.go.th/ws/dga/uat/payment/void |
+| API [Test] | https://api.egov.go.th/ws/dga/dev/payment/void |
+| Method | POST |
 
 Request Header
 
-รายการข้อมูล
-
-รายละเอียด
-
-Consumer-Key
-
-Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้)
-
-Token
-
-Token String ที่ได้จากการ API ขอ Token
-
-Content-Type
-
-กำหนดค่าดังนี้ : application/json
+| รายการข้อมูล | รายละเอียด |
+| -- | -- |
+| Consumer-Key | Consumer-Key ที่ได้ลงทะเบียนกับ สพร. (ระบบส่งให้ทาง e-Mail ที่ลงทะเบียนไว้) |
+| Token | Token String ที่ได้จากการ API ขอ Token |
+| Content-Type | กำหนดค่าดังนี้ : application/json |
 
 Request Body
 
+```json
 {
-
   "reference1": "String",
-
   "reference2": "String", 
-
   "paymentReference": "String" 
-
 }
-
-JSON
+```
 
 Request Body Parameters
 
-รายการข้อมูล	
-
-รายละเอียด
-
-Reference1
-
-รหัสอ้างอิงการชำระเงิน 1
-
-Required
-
-Reference2
-
-รหัสอ้างอิงการชำระเงิน 2
-
-Required
-
-PaymentReference
-
-รหัสอ้างอิงที่ได้หลังจากการชำระเงิน
-
-Required
+| รายการข้อมูล | รายละเอียด |
+| Reference1 | รหัสอ้างอิงการชำระเงิน 1 | Required |
+| Reference2 | รหัสอ้างอิงการชำระเงิน 2 | Required |
+| PaymentReference | รหัสอ้างอิงที่ได้หลังจากการชำระเงิน | Required |
 
 Response
 
+```json
 {
-
-```
 "status": "ResponseStatusEnum", 
-
 "errorCode": "ErrorCodeEnum", 
-
 "message": "String", 
-
 "data": "Object"
-```
-
 }
-
-JSON
+```
 
 Response Parameters
 
-รายการข้อมูล
-
-รายละเอียด
-
-Status
-
-สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก)
-
-ErrorCode 
-
-Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก)
-
-Message
-
-คำอธิบายสถานะการเรียกใช้งาน service
-
-Data
-
-ข้อมูลเพิ่มเติม (ถ้าไม่มีจะเป็น null)
+| รายการข้อมูล | รายละเอียด |
+| Status | สถานะการเรียกใช้งาน service (ดูสถานะทั้งหมดที่ Appendix : ResponseStatusEnum คลิก) | 
+| ErrorCode | Error code ถ้าหากเรียกสำเร็จ (Success) จะเป็น null (ดูสถานะทั้งหมดที่ Appendix : ErrorCodeEnum คลิก) |
+| Message | คำอธิบายสถานะการเรียกใช้งาน service |
+| Data | ข้อมูลเพิ่มเติม (ถ้าไม่มีจะเป็น null) |
 
 ตัวอย่างการเรียกใช้งาน
 
+```json
 Request
-
-\[POST] https://api.egov.go.th/ws/dga/dev/payment/void
-
+[POST] https://api.egov.go.th/ws/dga/dev/payment/void
 Content-Type: application/json
-
 Consumer-Key : {{consumerKey}}
-
 Token: {{token}}
 
 {
-
   "reference1": "123456789", 
-
   "reference2": "12345", 
-
   "paymentReference": "asdfg" 
-
 }
 
 Response
-
 {
-
-```
 "status": 0, 
-
 "errorCode": null, 
-
 "message": "Success", 
-
 "data": null
-```
-
 }
-
-HTTP
+```
 
 6 API ตรวจสอบสถานะการชำระเงิน
 
